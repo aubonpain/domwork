@@ -24,5 +24,12 @@ window.onload = function () {
         console.log(e.target.value);
     }
 
-    
+    var productData = '{"productname": "Postcards", "horizontal": "true", "sizes": ["5x7", "6x11"]}';
+
+    function parseProductData (data) {
+        var productData = JSON.parse(data);
+        console.log(productData);
+    }
+
+    parseProductData(productData);
 };
