@@ -1,0 +1,57 @@
+body {
+    background-color: white
+}
+
+.gridclass {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "a a"
+        "b c";
+    margin: 2rem 0; /* Don't want to use Px because a lot of code rewrite and calculations if we have media queries. */
+    /**/
+}
+
+.gridclass main {
+    background-color: cadetblue;
+    grid-area: a;
+    padding: 1rem;
+}
+
+.gridclass section:first-of-type {
+    background-color: darkorange;
+    grid-area: b;
+    padding: 1rem;
+}
+
+.gridclass section:last-of-type {
+    background-color: firebrick;
+    grid-area: c;
+    padding: 1rem;
+}
+
+.flexclass {
+    display: flex; /*This is the default, flex-direction: row*/
+    flex-wrap: wrap; /* Instead of the default of staying on one line, this allows wrapping */
+    position: relative;
+    margin: 2rem 0;
+    justify-content: space-between;
+}
+
+.flexclass main {
+    background-color: cadetblue;
+    flex-basis: 100%;
+    padding: 1rem;
+}
+
+.flexclass section {
+    background-color: darkorange;
+    flex-basis: 50%;
+    padding: 1rem;
+}
+
+.flexclass section:last-child {
+    background-color: firebrick;
+    padding: 1rem;
+}
